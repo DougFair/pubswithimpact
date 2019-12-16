@@ -1,0 +1,34 @@
+.container {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    text-align: center;
+    background-color: #d2d5ab; 
+    background-image: url(./covers.png);
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    font-family: Impact; 
+    margin-top:40px;
+}
+
+.bannerTitle {
+    font-size: 3rem;
+}
+
+.bannerSubtitle {
+    font-size: 1.5rem;
+}
+
+.subBanner{
+    margin: 10px 50px;
+    text-align: justify;
+    width: auto;
+    font-weight: 400
+}
+
+.bannerText {
+    background-color: rgba(0,0,0,0.5);
+    width: 50%;
+    height: 10%;
+}

@@ -1,0 +1,14 @@
+.reset {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.resetButton {
+margin-left: 50px;
+margin-bottom: 0;
+background-color: indianred;
+width: 100px;
+color:white;
+height: 2rem
+}

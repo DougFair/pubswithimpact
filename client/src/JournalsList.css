@@ -1,0 +1,123 @@
+.selectedJournal {
+    color: lightgrey;
+}
+
+.filterForm {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#checkPara {
+    margin:2px;
+    padding:0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 450px;
+    text-transform: capitalize;
+    }
+
+.journalList {
+    margin: 10px 50px 10px 50px
+}
+
+.linkButtonJournalList {
+    margin: 50px 50 50 500px;
+    background-color: rgb(154, 190, 87);
+    margin-top: 15px;
+    width: 100px;
+    color:white;
+    height: 2rem
+}
+
+.linkButtonNoJournalList {
+    margin: 50px 50 50 500px;
+    background-color: rgb(120, 180, 214);
+    margin-top: 15px;
+    width: 100px;
+    color:white;
+    height: 2rem
+}
+
+.divider {
+    margin-top: 40px;
+}
+
+.linkButton{    
+}
+
+.introText {
+    font-weight: 500;
+    margin: 0
+}
+
+.manualJournalListHead {
+    margin-bottom: 5px
+}
+
+.manualJournalListSubheading {
+    color:grey;
+    font-style: italic;
+    font-weight: 400;
+    margin:5px 5px 5px 0;
+    font-size: 1rem;
+}
+
+.ifColorList {
+    margin-bottom: 5px;
+}
+
+.noJournalError {
+    text-align: center;
+    color: rgb(228, 77, 51);
+    margin: 10px 0 0 0;
+}
+
+.journalList{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.journalListHeading {
+    margin-top: 50px;
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+}
+
+.journalListSubHeading {
+    margin-bottom: 0;
+}
+
+.addJournalSection {
+    min-width: 300px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.removeJournalSection {
+    min-width: 500px;
+
+}
+
+hr {
+    margin-top:40px;
+    border: 1px solid lightgrey;
+    width:90%;
+}
+
+.subheading {
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+}
+
+.ifIndicator {
+    margin: 0;
+    padding: 0
+}

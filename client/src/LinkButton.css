@@ -1,0 +1,17 @@
+.linkButton{
+    background-color: black;
+    margin-top: 15px;
+    width: 100px;
+    color:white;
+    height: 2rem
+}
+
+.submittedText{
+    color: red
+}
+
+.submittedForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

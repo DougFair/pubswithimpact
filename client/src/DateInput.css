@@ -1,0 +1,64 @@
+.dateInput {
+    background-color: black;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    padding: 0;
+    font-family: Impact;
+}
+
+.column {
+    display: inline-flex;
+    margin: 0 5px;
+    padding: 0
+}
+
+.inputLabel {
+    margin: 5px 0 5px 0
+}
+
+.searchTitle {
+    margin-right: 50px;
+    display: flex;
+    justify-content: flex-start;
+    color: white
+}
+
+.dateInputForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 5px
+}
+
+.dateInputButton {
+    height: 1.4rem;
+    background-color: rgb(238, 163, 25);
+    justify-content: center;
+}
+
+.titleInstruct{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.titleInstruct p {
+    margin: 0 10px 0 0;
+    font-weight: 300;
+    font-size: 0.7rem; 
+    font-family: arial
+}
+
+.subDateInput {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.customiseMessage {
+    color: rgb(134,204,45);
+    margin-left: 20px
+}

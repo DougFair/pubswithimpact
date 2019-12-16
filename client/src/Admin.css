@@ -1,0 +1,87 @@
+.adminPage{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.adminSelector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminButton {
+    width: 200px;
+    height: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.adminButton:hover {
+    -webkit-box-shadow: 3px 6px 8px 1px rgba(194,194,194,1);
+    -moz-box-shadow: 3px 6px 8px 1px rgba(194,194,194,1);
+    box-shadow: 3px 6px 8px 1px rgba(194,194,194,1);
+}
+
+.inputBox {
+    height: 1.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    margin-top: 5px;
+    padding: 5px
+}
+
+.submitButton {
+    width: 100px;
+    background-color:black;
+    height: 2.5rem;
+    border: 1px black solid;
+    margin: 5px;
+    color: white;
+}
+
+.submitButton:hover {
+    -webkit-box-shadow: 3px 6px 8px 1px rgba(194,194,194,1);
+    -moz-box-shadow: 3px 6px 8px 1px rgba(194,194,194,1);
+    box-shadow: 3px 6px 8px 1px rgba(194,194,194,1);
+}
+
+.errorMessage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+label {
+    margin-bottom: 20px;
+    font-weight: 700
+}
+
+.journalError {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* .journalInput{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 1px solid black
+}
+
+.journalForm{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black
+
+} */

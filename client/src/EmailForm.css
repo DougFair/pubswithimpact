@@ -1,0 +1,58 @@
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 50px
+}
+
+.contactHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.contactHeader h1 {  
+    margin-bottom: 5px;
+}
+
+.contactHeader p {  
+    margin: 5px;
+    display: flex;
+    align-items: flex-start;
+    text-align: justify;
+}
+
+.contactInput {
+    margin-bottom: 10px;
+    width:300px;
+    height:1.5rem;
+    border: black 1px solid;
+    padding: 5px;
+}
+
+.contactInputButton {
+    background-color: black;
+    width: 100px;
+    color:white;
+    height: 2rem;
+    
+}
+
+.emailForm label {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+.contactInputTextArea {
+    margin-bottom: 10px;
+    width:300px;
+    border: black 1px solid;
+    padding: 5px;
+}

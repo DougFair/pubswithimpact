@@ -1,0 +1,38 @@
+.subheading {
+    margin-bottom: 5px;
+    color: rgb(241, 184, 98)
+}
+
+.journalInput {
+    height:1.5rem;
+    width:300px;
+    margin-top: 10px;
+}
+
+.formSubHeading {
+    font-weight: 400;
+    font-style: italic;
+    color: grey;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.addButton{
+    background-color: black;
+    width: 100px;
+    color:white;
+    height: 2rem
+}
+
+.subsubheading{
+    font-weight: 400;
+    color:grey;
+    margin: 5px
+}
+
+.journalListAddError{
+    color: red;
+    margin:8px 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
