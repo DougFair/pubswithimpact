@@ -213,7 +213,7 @@ if (this.state.idlistNoJournals.length) {
       let loop = 0
      
       paperListString.forEach(listString => {
-          axios.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=${listString}&${REACT_APP_PUBMED_API_KEY}`)
+          axios.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=${listString}&${process.env.REACT_APP_PUBMED_API_KEY}`)
           
           .then(response1 => { 
             let myObj=response1.data.result
