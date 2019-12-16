@@ -9,7 +9,7 @@ require("dotenv").config()
 //use cors to allow cross origin resource sharing
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://pubswithimpact.herokuapp.com/',
     credentials: true,
   })
 );
@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "client", "build")))
 
-app.get('/', (req,res) => res.send("This route"))
+// app.get('/', (req,res) => res.send("This route"))
 
 app.post('/sendEmail', (req, res) => {
   console.log("backend")
