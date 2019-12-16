@@ -57,7 +57,7 @@ class App extends Component {
     this.setState({loading: true})
     let jlist = []
     let jlistTitleIF =[]
-    axios.get("https://toppubs-385ff.firebaseio.com/journals.json")
+    axios.get(REACT_APP_FIREBASE_API_KEY)
     .then(response => {
         let vals = Object.values(response.data)
         this.setState({journals: vals})
