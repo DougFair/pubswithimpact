@@ -441,27 +441,3 @@ filterJournals = (selectedJournals, newJournals) => {
 }
 }
 export default App;
-// CODE FOR SINGLE PAPER GET
-
-
-
-// CODE FOR GETTING ABSTRACTS
-
-// addAbstracts = idlist => {
-//   let abstractList = [];
-//   idlist.forEach(id => {
-//     let abstractObj = {};
-//     http
-//       .get(
-//        `http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id=${id}&api_key=9476810b14695bd14f228e63433facbf9c08`
-//       )
-//       .then(response3 => {
-//         abstractObj.id = id
-//         abstractObj.abstract = response3.data
-//         abstractList.push(abstractObj)
-//     })
-//     .then(results => {
-//       this.setState({abstracts: abstractList})
-//     })
-//   })
-// }

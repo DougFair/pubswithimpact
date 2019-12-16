@@ -43,11 +43,8 @@ class AddJournalForm extends Component {
         </div>
     return(
         journalAddForm
-    )     
-
-
-}
-    
+        )     
+    }    
 }
 
 export default AddJournalForm
