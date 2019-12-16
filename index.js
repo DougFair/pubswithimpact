@@ -4,6 +4,7 @@ const sgMail = require('@sendgrid/mail')
 const path = require("path")
 
 const app = express();
+require("dotenv").config()
 
 //use cors to allow cross origin resource sharing
 app.use(
