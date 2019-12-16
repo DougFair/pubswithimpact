@@ -13,7 +13,7 @@ app.use(
     credentials: true,
   })
 );
-sgMail.setApiKey(process.env.apiKey);
+sgMail.setApiKey(process.env.API_KEY);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
