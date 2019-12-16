@@ -13,7 +13,7 @@
 
 # misc
 .env
-base
+client/src/base.js
 .DS_Store
 .env.local
 .env.development.local
