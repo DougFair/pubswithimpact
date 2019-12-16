@@ -29,7 +29,7 @@ render (){
       <div>
       {!this.props.inputedDate2 ? 
           <div className="dateHeading" >
-          <h2>Papers published since {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")} <span className="totalpapers">({this.props.idlistInputedDate.length}> in total)</span></h2>
+          <h2>Papers published since {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")} <span className="totalpapers">({this.props.idlistInputedDate.length} in total)</span></h2>
           </div>
           :
           <div className="dateHeading">
