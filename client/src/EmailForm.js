@@ -23,13 +23,13 @@ handleSubmit = (e) => {
     }
 
     axios
-    .post('https://pubswithimpact.herokuapp.com/sendEmail', message)
-    .then(() => alert("Email successfully sent!"))
+    .post('http://localhost:3001/sendEmail', message)
+    .then(this.setState({name:"", from:"",subject:"", text:""}))
     .catch(err => {
       console.error(err);
-    });
-    this.setState({name:"", from:"",subject:"", text:""})
-}
+    })
+    alert("Message Sent!")
+}  
 
 
     handleChange = (evt) => {

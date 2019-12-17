@@ -22,7 +22,6 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 // app.get('/', (req,res) => res.send("This route"))
 
 app.post('/sendEmail', (req, res) => {
-  console.log("backend")
     sgMail.send(req.body)
   });
 
