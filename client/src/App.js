@@ -89,7 +89,6 @@ class App extends Component {
   }
 
   getIdList = () => {
-    console.log("getlist")
     let splitjlist = "" 
     let dateParams = ""
     let dateParams2 = ""
@@ -120,8 +119,8 @@ class App extends Component {
     const dateParamsEncoded = encodeURIComponent(dateParams)
     const dateParamsEncoded2 = encodeURIComponent(dateParams2)
 
-    const url =  `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=10000&term=${urlEncoded}${dateParamsEncoded}`
-    const url2 =  `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=10000&term=${urlEncoded}${dateParamsEncoded2}`
+    const url =  `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=10000&term=${urlEncoded}${dateParamsEncoded}&api_key=${process.env.REACT_APP_PUBMED_API_KEY}`
+    const url2 =  `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=10000&term=${urlEncoded}${dateParamsEncoded2}&api_key=${process.env.REACT_APP_PUBMED_API_KEY}`
 
     if (!this.state.inputedDate1) {
       axios.all([
@@ -163,7 +162,7 @@ noJournalSearch = () => {
   const dateParams = `${this.state.dateMinus7}"[Date - Entrez] : "3000"[Date - Entrez])`
   const urlEncoded = encodeURIComponent(urlunencoded)
   const dateParamsEncoded = encodeURIComponent(dateParams)
-  const url =  `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=10000&term=${urlEncoded}${dateParamsEncoded}`
+  const url =  `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=10000&term=${urlEncoded}${dateParamsEncoded}&api_key=${process.env.REACT_APP_PUBMED_API_KEY}`
   axios.get(url)
   .then (response => 
     this.setState({idlistNoJournals: response.data.esearchresult.idlist, selectedJournals: [], newJournals: [], inputedDate1: "", inputedDate2:"", loading:true, idlist:[], idlistWeek:[], papersList:[], papersListWeek: []}, () => {
@@ -213,7 +212,7 @@ if (this.state.idlistNoJournals.length) {
       let loop = 0
      
       paperListString.forEach(listString => {
-          axios.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=${listString}&${process.env.REACT_APP_PUBMED_API_KEY}`)
+          axios.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=${listString}&api_key=${process.env.REACT_APP_PUBMED_API_KEY}`)
           
           .then(response1 => { 
             let myObj=response1.data.result
@@ -279,7 +278,7 @@ if (this.state.idlistNoJournals.length) {
       let loopWeek = 0
       if (!this.state.inputedDate1) {
       paperListStringWeek.forEach(listString => {
-          axios.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&rettype=abstract&id=${listString}&api_key=9476810b14695bd14f228e63433facbf9c08`)
+          axios.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&rettype=abstract&id=${listString}&api_key=${process.env.REACT_APP_PUBMED_API_KEY}`)
           .then(response2 => {
             // this.setState({loading: false})        
             this.state.idlistWeek.forEach(id => {
@@ -291,7 +290,6 @@ if (this.state.idlistNoJournals.length) {
                 let  doi = response2.data.result[id].elocationid
                 let  authors = response2.data.result[id].authors
                 let  pubdate = response2.data.result[id].pubdate
-                console.log(response2.data.result[id].source)
                 this.state.jlistTitleIF.forEach(jlistItem => {
                   if ((jlistItem.title.toLowerCase() === response2.data.result[id].fulljournalname.toLowerCase()) || (jlistItem.title.toLowerCase() === response2.data.result[id].source.toLowerCase())){
                     paperWeekObj.JIF = jlistItem.IF
@@ -347,7 +345,6 @@ filterJournals = (selectedJournals, newJournals) => {
   jlist.push((`"${jnl}"[Journal] OR `))
   })
   this.setState({idlistNoJournals:[], papersListNoJournals:[], jlist, selectedJournals, newJournals}, () => {
-    console.log("idlist")
   this.getIdList()}) 
 }
 

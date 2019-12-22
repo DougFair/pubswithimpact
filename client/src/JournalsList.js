@@ -39,38 +39,27 @@ handleNoJournalSubmit= (evt) => {
 
 handleSubmit = (evt) => {
     evt.preventDefault ()
-    console.log("here11")
     this.props.filterJournals(this.state.selectedJournals, this.state.newJournals)
-    console.log("here12")
 } 
 
 handleFilter = (evt) =>{
-    
-    console.log("filter")
     let selection = evt.target.name
         if (this.state.selectAll)(this.setState({selectAll: false, papersListNoJournals: []}))
         
         if (this.state.selectedJournals.length){
-            console.log("filter2")
         if(this.state.selectedJournals.includes(evt.target.name)){
-            console.log("filter3")
         this.setState(st => ({papersListNoJournals: [], selectedJournals: st.selectedJournals.filter(journal => journal !== selection)}), () => {
-        console.log("filter3b")
         this.noJournalCheck()} )
         } else {
-            console.log("filter4")
         this.setState({papersListNoJournals: [], selectedJournals: [...this.state.selectedJournals, evt.target.name]}, () => this.noJournalCheck())
         } } else {
-            console.log("filter5")
         this.setState({papersListNoJournals: [], selectedJournals: [...this.state.selectedJournals, evt.target.name]},() => {
-            console.log("filter6")
             this.noJournalCheck()})
         
         }
 }
 
 noJournalCheck = () => {
-    console.log("kdlksdf")
     if((this.state.selectedJournals.length === this.state.journals.length) && !this.state.newJournals.length){
         this.setState({noJournalError: true, papersListNoJournals: []})
     } else {
