@@ -18,9 +18,6 @@
     text-transform: capitalize;
     }
 
-.journalList {
-    margin: 10px 50px 10px 50px
-}
 
 .linkButtonJournalList {
     margin: 50px 50 50 500px;
@@ -42,9 +39,6 @@
 
 .divider {
     margin-top: 40px;
-}
-
-.linkButton{    
 }
 
 .introText {
@@ -80,8 +74,9 @@
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
+    margin: 10px 50px 10px 50px
 }
+
 
 .journalListHeading {
     margin-top: 50px;
