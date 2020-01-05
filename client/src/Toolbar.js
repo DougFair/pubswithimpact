@@ -13,7 +13,6 @@ const Toolbar = () => {
             <div>
                 <Link to="/about" className="link">About</Link>
                 <Link to="/contact" className="link">Contact</Link>
-                <Link to="/admin" className="link">Admin</Link>
             </div>
         </nav>
       );

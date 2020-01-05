@@ -156,7 +156,7 @@ if (this.props.inputedDate1 || this.props.idlistNoJournals.length){
             {listDisplay}
             {weeklyListDisplay && 
             <div>
-                <h2 style={{marginLeft: "50px"}}>Papers published in the preceeding 6 days <span className="totalpapers">({this.props.idlistWeek.length} in total)</span></h2>
+                <h2 style={{marginLeft: "20px"}}>Papers published in the preceeding 6 days <span className="totalpapers">({this.props.idlistWeek.length} in total)</span></h2>
                 {weeklyListDisplay}
             </div>
             } 
