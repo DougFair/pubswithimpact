@@ -1,7 +1,7 @@
 .paperlistContainer {
     margin-bottom: 25px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .title {
@@ -15,17 +15,17 @@
 }
 
 .paperDisplay {
-    margin: 10px 50px 10px 50px
+    margin: 10px 20px 10px 20px
 }
 
 .dateHeading {
     display:flex;
     align-items: center;
-    margin-left:50px;
+    margin-left:20px;
 }
 
 .noPapers {
-    margin-left:50px;  
+    margin-left:20px;  
 }
 
 .totalpapers{
