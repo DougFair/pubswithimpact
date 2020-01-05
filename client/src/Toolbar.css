@@ -7,7 +7,8 @@
     position: fixed;
     top: 0;
     width:100%;
-    font-family: Impact;
+    font-family: Impact, Arial;
+    font-style: bold;
 }
 
 .link{

@@ -6,8 +6,9 @@
     justify-content: space-between;
     height: auto;
     padding: 0;
-    font-family: Impact;
-    font-weight: 300;
+    font-family: Impact, Arial;
+    font-style: bold;
+    font-weight: 700;
     flex-wrap: wrap;
 }
 

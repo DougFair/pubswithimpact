@@ -8,8 +8,10 @@
     display: flex;
     justify-content: center;
     height: auto;
-    font-family: Impact, 'Anton', sans-serif; 
+    font-family: Impact, Arial;
     margin-top:40px;
+    font-style: bold;
+    font-weight: 900;
 }
 
 .bannerTitle {
