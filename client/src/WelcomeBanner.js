@@ -1,6 +1,5 @@
 import React from 'react'
 import './WelcomeBanner.css'
-import DateInput from './DateInput'
 import './DateInput.css'
 const WelcomeBanner = () => {
     return(
