@@ -8,6 +8,7 @@
     padding: 0;
     font-family: 'Roboto Condensed', sans-serif;
     flex-wrap: wrap;
+    width: 100%
 }
 
 .column {
