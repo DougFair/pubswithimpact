@@ -28,19 +28,21 @@ class DateInput extends Component {
     return (
             <div>
                 <div className="dateInput">
-                <div><p className="customiseMessage">Want to customise your search further? Click "Journals" in the toolbar...</p></div>
                 <div>
+                    <p className="customiseMessage">Click "Journals" in toolbar to customise your search further...</p>
+                </div>
+                <div className="dateModule">
                 <form  className="dateInputForm" onSubmit={this.handleSubmit}>
                 
                 <div style={{display:"flex", alignItems:"center"}}>
-                        <div className="column"><p className="inputLabel">Start Date</p></div>  
+                        <div className="column"><p className="inputLabel">Start</p></div>  
                         <div className="column">
                             <input className="dateForm" type="date" name="newStartDate" value={this.state.newStartDate} placeholder="DD/MM/YYYY" onChange={this.handleChange}/>   
                         </div>
                     </div>
                     
                     <div style={{display:"flex", alignItems:"center"}}> 
-                        <div className="column" ><p className="inputLabel">End Date</p></div>
+                        <div className="column" ><p className="inputLabel">End</p></div>
                         <div className="column">
                             <input className="dateForm" type="date" name="newEndDate" value={this.state.newEndDate} placeholder="Present or enter DD/MM/YYYY" onChange={this.handleChange}/>
                         </div>
@@ -51,7 +53,7 @@ class DateInput extends Component {
                     </div>   
                 </form>
                 <div className="titleInstruct" >
-                    <p style={{fontWeight: "300", fontSize: "0.7rem", fontFamily: "arial"}}>You must enter a Start Date. End Date defaults to today if nothing is entered.</p>
+                    <p>You must enter a Start Date. End Date defaults to today.</p>
                 </div>
                 </div>
                 </div>

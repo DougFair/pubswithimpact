@@ -7,7 +7,7 @@ const WelcomeBanner = () => {
             <div className="container">
                 <div className="bannerText">
                     <p className="bannerTitle">AUSSIE PUBS WITH <span style={{color: "red", fontStyle: "italic"}}>IMPACT!</span></p>
-                    <p className="bannerSubtitle">Keep up with the latest hot papers published in Australia</p>
+                    <p className="bannerSubtitle">Keep up with the latest hot Australian papers</p>
                 </div>
             </div>
         </div>
