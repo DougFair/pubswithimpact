@@ -7,8 +7,8 @@
     position: fixed;
     top: 0;
     width:100%;
-    font-family: Impact, Arial;
-    font-style: bold;
+    font-family:'Roboto Condensed', sans-serif;
+    font-weight: 700;
 }
 
 .link{

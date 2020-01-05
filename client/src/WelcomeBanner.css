@@ -8,10 +8,10 @@
     display: flex;
     justify-content: center;
     height: auto;
-    font-family: Impact, Arial;
+    font-family: 'Roboto Condensed', sans-serif;
     margin-top:40px;
     font-style: bold;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .bannerTitle {

@@ -6,9 +6,7 @@
     justify-content: space-between;
     height: auto;
     padding: 0;
-    font-family: Impact, Arial;
-    font-style: bold;
-    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
     flex-wrap: wrap;
 }
 
