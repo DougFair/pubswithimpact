@@ -1,3 +1,8 @@
 .ifColorList {
-    margin: 0 15px;
+    margin-left: 15px;
+}
+@media (max-width 400px){
+    .ifColorList {
+        font-size: 0.9rem
+    }
 }
