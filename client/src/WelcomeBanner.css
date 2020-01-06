@@ -10,16 +10,18 @@
     width: 100%;
     height: auto;
     font-family: 'Roboto Condensed', sans-serif;
-    margin-top:40px;
     font-weight: 700;
 }
 
 .bannerTitle {
     font-size: 3rem;
+    border: 1px solid yellow;
+
 }
 
 .bannerSubtitle {
     font-size: 1.5rem;
+    border: 1px solid yellow
 }
 
 .subBanner{
@@ -38,6 +40,7 @@
 @media (max-width: 460px) {
     .bannerTitle {
         font-size: 2.8rem;
+        margin-bottom: 0
     }
     .bannerText {
         width: 60%;
@@ -50,5 +53,8 @@
 @media (max-width: 400px) {
     .bannerTitle {
         font-size: 2.6rem;
+    }
+    .container {
+        height: 5%;
     }
 }
