@@ -43,6 +43,7 @@ render () {
                 <div className="contactHeader">
                     <h1>Contact Us!</h1>
                     <p>Please feel free to contact us about any aspect of this website - we are very open to suggestions on how you think we can improve things! Suggestions for any other features you would like to see added, or specific journal titles you would like included in our standard curated list, are also most welcome - all ideas will be considered. Thank You!</p>
+                    <p>Email us on&nbsp;<a href="contact@pubswithimpact.com">contact@pubswithimpact.com</a>&nbsp;or use the form below.</p>
                 </div>
 
                 <div className="emailForm">

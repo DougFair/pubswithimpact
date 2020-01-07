@@ -11,7 +11,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     max-width: 600px;
     line-height: 1.5;
 }
@@ -44,7 +43,7 @@
 }
 
 .emailForm{
-    margin-top: 50px
+    margin-top: 25px
 }
 
 .emailForm label {
