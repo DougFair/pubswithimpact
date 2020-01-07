@@ -144,7 +144,7 @@ class App extends Component {
           const idlistInputedDate = this.state.idlistInputedDate.concat(response.data.esearchresult.idlist)
           this.setState({idlistInputedDate})
           loop = loop +1
-          splitjlist.length === loop &&
+          splitjlist.length === loop && 
           this.addPapers()
           })
           .catch(error => 
@@ -186,7 +186,10 @@ let idlistToDisplay = ""
 if (this.state.idlistNoJournals.length) {
         idlistToDisplay = this.state.idlistNoJournals
     } else if (this.state.idlistInputedDate.length) {
-        idlistToDisplay = this.state.idlistInputedDate
+      if (this.state.idlistInputedDate.length > 2000) {
+        alert("Your search returned: " + this.state.idlistInputedDate.length + " papers. All papers beyond the 2000th have been removed. If you want to see more papers in that date range, please perform separate searches using closer start and end dates.")
+        }
+        idlistToDisplay = this.state.idlistInputedDate.splice(2000)
     } else if (this.state.idlist.length){
         idlistToDisplay = this.state.idlist
     }
