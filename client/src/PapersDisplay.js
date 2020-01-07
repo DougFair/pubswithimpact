@@ -48,8 +48,10 @@ render (){
   } else {
     papersToDisplay = this.props.papersList
     heading = 
-    <div className="paperDisplay">        
-    { !this.props.idlistNoJournals.length && <h2>Papers published yesterday <span className="totalpapers">({this.props.papersList.length} in total)</span></h2>}
+    <div className="paperDisplay">
+    <p className="customDateMessage">You can customise the dates of your search in the toolbar above</p>        
+    { !this.props.idlistNoJournals.length && 
+    <h2>Papers published yesterday <span className="totalpapers">({this.props.papersList.length} in total)</span></h2>}
     {!this.props.papersList.length && !this.props.idlistNoJournals.length && 
     <p>There were no Aussie papers published yesterday in the selected journals.</p>
     }
@@ -156,7 +158,7 @@ if (this.props.inputedDate1 || this.props.idlistNoJournals.length){
             {listDisplay}
             {weeklyListDisplay && 
             <div>
-                <h2 style={{marginLeft: "20px"}}>Papers published in the preceeding 6 days <span className="totalpapers">({this.props.idlistWeek.length} in total)</span></h2>
+                <h2 className="paperDisplay">Papers published in the preceeding 6 days <span className="totalpapers">({this.props.idlistWeek.length} in total)</span></h2>
                 {weeklyListDisplay}
             </div>
             } 

@@ -1,14 +1,23 @@
 .reset {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    margin-bottom: 0;
+    border: 1px solid yellow
 }
 
 .resetButton {
-margin-left: 50px;
+margin-left: 20px;
 margin-bottom: 0;
 background-color: indianred;
 width: 100px;
 color:white;
-height: 2rem
+height: 2rem;
+margin-bottom: 0
+}
+
+
+@media (max-width: 400px) {
+    .resetButton {
+        margin-left: 20px;
+    }
 }

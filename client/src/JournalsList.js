@@ -113,7 +113,7 @@ handleSelectAll = (evt) =>{
                 }
                 
                 return (
-                <div  className="filterForm" key={item.title}>
+                <div  className="journalListRow" key={item.title}>
                     <p className="ifIndicator" style={{color:ifColor, fontSize: "1.5rem", paddingBottom: "0.25rem"}}>•</p>
                     <input type="checkbox"
                     name={item.title} 
@@ -152,18 +152,18 @@ handleSelectAll = (evt) =>{
                         <h2 className="subheading">Search without filtering journals</h2>
                         <div>
                         
-                            <h3 className="manualJournalListSubheading" style={{display:"flex", justifyContent:"center"}}>Returns all Aussie papers in last week.</h3>
+                            <h3 className="manualJournalListSubheading1">Returns all Aussie papers in last week.</h3>
                             <form onClick={this.handleNoJournalSubmit} style={{display:"flex", justifyContent:"center"}}>
                                 <LinkButton className="linkButtonNoJournalList" to='/'>ALL JOURNALS</LinkButton>
                             </form>
-                            <h3 className="manualJournalListSubheading">NOTE: Search dates cannot be customised - you will only get pubs from the last week.</h3>
+                            <h3 className="manualJournalListSubheading2">NOTE: Search dates cannot be customised - you will only get pubs from the last week.</h3>
                         </div>
 
                     <hr/>
 
                         <h2 className="subheading" >Manually add journals and/or edit our curated list</h2>
                             
-                            <h3 className="introText">After adding and/or removing journals, click  "SEARCH""...</h3>
+                            <h4 className="introText">After adding and/or removing journals, click  "SEARCH"...</h4>
                             
                             {this.state.noJournalError ? 
                             <div className="noJournalError">
@@ -199,23 +199,27 @@ handleSelectAll = (evt) =>{
                     </div>
 
                     <div className="removeJournalSection">
-                        <h2 className="subheading">Edit the curated journal list</h2>
-                        <h3 className="manualJournalListSubheading">Uncheck those you do not want to include in your search.</h3>
-                        <p className="ifColorList">Impact Factors: <span style={{color:"red",fontSize:"1.5rem"}}>•</span> >30 | <span style={{color:"orange",fontSize:"1.5rem"}}>•</span> 20-30 | <span style={{color:"green",fontSize:"1.5rem"}}>•</span> 10-20 | <span style={{color:"blue",fontSize:"1.5rem"}}>•</span> &lt;10</p>
-                        <div className="filterForm">
-                        <input type="checkbox"
-                            id="all"
-                            name="all" 
-                            onChange={this.handleSelectAll}
-                            checked={this.state.selectAll ||(this.state.selectedJournals.length === this.state.journals.length)}
-                            className="checkbox"
-                        />
-                        <p style={{fontWeight:600}}>Uncheck/Check All Journals</p>
+                        <div className="removeJournalHeadings">
+                            <h2 className="subheading">Edit the curated journal list</h2>
+                            <h3 className="manualJournalListSubheading">Uncheck those you do not want to include in your search.</h3>
+                            <p className="ifColorList">Impact Factors: <span style={{color:"red",fontSize:"1.5rem"}}>•</span> >30 | <span style={{color:"orange",fontSize:"1.5rem"}}>•</span> 20-30 | <span style={{color:"green",fontSize:"1.5rem"}}>•</span> 10-20 | <span style={{color:"blue",fontSize:"1.5rem"}}>•</span> &lt;10</p>
                         </div>
-                        {list}
+                        <div className="journalSelectSection">
+                            <div className="filterForm">
+                                <input type="checkbox"
+                                    id="all"
+                                    name="all" 
+                                    onChange={this.handleSelectAll}
+                                    checked={this.state.selectAll ||(this.state.selectedJournals.length === this.state.journals.length)}
+                                    className="checkbox"
+                                />
+                                <p style={{fontWeight:600}}>Uncheck/Check All Journals</p>
+                            </div>
+                            <div className="journalListColumn">
+                                {list}
+                            </div>
+                        </div>
                     </div>
-                    
-
                 </div>
             </div>   
         )
@@ -223,5 +227,3 @@ handleSelectAll = (evt) =>{
 }
 
  export default JournalList
-
- // const urlunencoded = `((("Nature"[Journal] OR "Nature cell biology"[Journal] OR "Nature structural & molecular biology"[Journal] OR "Cell"[Journal] OR "Molecular cell"[Journal] OR "Cell reports"[Journal] OR "Science (New York, N.Y.)"[Journal] OR "Proceedings of the National Academy of Sciences of the United States of America"[Journal] OR "The Journal of cell biology"[Journal] OR "Cancer cell"[Journal] OR "eLife"[Journal] OR "Nature chemical biology"[Journal] OR "The EMBO journal"[Journal] OR "Molecular biology and evolution"[Journal] OR "Nature medicine"[Journal] OR "Autophagy"[Journal] OR "Molecular plant"[Journal] OR "Genes & development"[Journal] OR "PLoS biology"[Journal] OR “Current biology” [Journal] OR "Cell metabolism"[Journal] OR "Cell stem cell"[Journal] OR "Cell research"[Journal] OR "Science translational medicine"[Journal] OR "Protein & cell"[Journal] OR "Cell death & disease"[Journal] OR "Science signaling"[Journal] OR "Cell chemical biology"[Journal] OR "Cell death and differentiation"[Journal] OR "EMBO reports"[Journal])) AND Australia[Affiliation]) AND ("`

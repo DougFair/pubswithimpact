@@ -20,8 +20,8 @@ class AddJournalForm extends Component {
 
     render () {
         let journalAddForm = 
-        <div>
-            <form onSubmit={this.submitJournal}>
+        <div className="addJournalContainer">
+            <form onSubmit={this.submitJournal} className="addJournalForm">
  
                 <div>
                     <input 
@@ -38,7 +38,6 @@ class AddJournalForm extends Component {
                 <div>
                     <button type="submit" className="addButton">ADD</button>
                 </div>
-
             </form>
         </div>
     return(

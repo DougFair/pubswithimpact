@@ -15,7 +15,11 @@
 }
 
 .paperDisplay {
-    margin: 10px 20px 10px 20px
+    margin: 0 0 0 20px
+}
+
+.customDateMessage {
+    color: rgb(134,204,45);
 }
 
 .dateHeading {
