@@ -23,7 +23,7 @@ handleSubmit = (e) => {
     }
 
     axios
-    .post('http://pubswithimpact.herokuapp.com/sendEmail', message)
+    .post('https://pubswithimpact.herokuapp.com/sendEmail', message)
     .then(this.setState({name:"", from:"",subject:"", text:""}))
     .catch(err => {
       console.error(err);
