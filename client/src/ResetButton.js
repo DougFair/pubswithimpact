@@ -11,7 +11,7 @@ const ResetButton = (props) => {
         <div className="reset">
         <button className="resetButton" onClick={clickHandler}>RESET</button>
         <span><p style={{marginLeft: "10px", fontWeight:"600"}}>
-      Click to reset the page to the initial "Yesterday / Weekly" view</p>
+      Reset dates to the initial "Yesterday / Weekly" view</p>
         </span>
         </div>
     )

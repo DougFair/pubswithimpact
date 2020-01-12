@@ -26,6 +26,9 @@
     text-align: justify;
 }
 
+.contactHeader span {  
+    color: indianred;
+}
 .contactInput {
     margin-bottom: 10px;
     width:300px;

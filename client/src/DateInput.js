@@ -29,7 +29,7 @@ class DateInput extends Component {
             <div>
                 <div className="dateInput">
                 <div>
-                    <p className="customiseMessage">Click "Journals" in toolbar to customise your search further...</p>
+                    <p className="customiseMessage">Click "Journals" in menubar to customise your search further...</p>
                 </div>
                 <div className="dateModule">
                 <form  className="dateInputForm" onSubmit={this.handleSubmit}>

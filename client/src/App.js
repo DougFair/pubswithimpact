@@ -188,8 +188,10 @@ if (this.state.idlistNoJournals.length) {
     } else if (this.state.idlistInputedDate.length) {
       if (this.state.idlistInputedDate.length > 2000) {
         alert("Your search returned: " + this.state.idlistInputedDate.length + " papers. All papers beyond the 2000th have been removed. If you want to see more papers in that date range, please perform separate searches using closer start and end dates.")
-        }
-        idlistToDisplay = this.state.idlistInputedDate.splice(2000)
+        idlistToDisplay = this.state.idlistInputedDate.splice(2000)  
+      } else {
+        idlistToDisplay = this.state.idlistInputedDate
+      }  
     } else if (this.state.idlist.length){
         idlistToDisplay = this.state.idlist
     }
@@ -229,7 +231,7 @@ if (this.state.idlistNoJournals.length) {
               let  pages = myObj[key].pages
               let  doi = myObj[key].elocationid
               let  authors = myObj[key].authors
-              let  pubdate = myObj[key].pubdate 
+              let  pubdate = myObj[key].pubdate.slice(0,4)
                   
               this.state.jlistTitleIF.forEach(jlistItem => {
                 if ((jlistItem.title.toLowerCase() === myObj[key].fulljournalname.toLowerCase()) || (jlistItem.title.toLowerCase() === myObj[key].source.toLowerCase())){
@@ -261,7 +263,6 @@ if (this.state.idlistNoJournals.length) {
           .then(response1 => {
           
           if (loop === paperListString.length) {
-            // this.setState({loading: false}) 
             if (this.state.idlistNoJournals.length) {
               paperList.length === idlistToDisplay.length && 
               this.setState({ papersListNoJournals: paperList, loading: false });
@@ -282,8 +283,7 @@ if (this.state.idlistNoJournals.length) {
       if (!this.state.inputedDate1) {
       paperListStringWeek.forEach(listString => {
           axios.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&rettype=abstract&id=${listString}&api_key=${process.env.REACT_APP_PUBMED_API_KEY}`)
-          .then(response2 => {
-            // this.setState({loading: false})        
+          .then(response2 => {    
             this.state.idlistWeek.forEach(id => {
                 let paperWeekObj = {}
                 let title = response2.data.result[id].title
@@ -292,7 +292,7 @@ if (this.state.idlistNoJournals.length) {
                 let  pages = response2.data.result[id].pages
                 let  doi = response2.data.result[id].elocationid
                 let  authors = response2.data.result[id].authors
-                let  pubdate = response2.data.result[id].pubdate
+                let  pubdate = response2.data.result[id].pubdate.slice(0,4)
                 this.state.jlistTitleIF.forEach(jlistItem => {
                   if ((jlistItem.title.toLowerCase() === response2.data.result[id].fulljournalname.toLowerCase()) || (jlistItem.title.toLowerCase() === response2.data.result[id].source.toLowerCase())){
                     paperWeekObj.JIF = jlistItem.IF
