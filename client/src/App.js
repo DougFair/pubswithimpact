@@ -89,7 +89,7 @@ class App extends Component {
   }
 
   getIdList = () => {
-    let splitjlist = "" 
+    let splitjlist = [] 
     let dateParams = ""
     let dateParams2 = ""
     
@@ -98,7 +98,7 @@ class App extends Component {
       const jlistLast = this.state.jlist.slice(Math.floor(this.state.jlist.length/2))
       splitjlist = [jlistFirst, jlistLast]
       } else {
-      splitjlist = this.state.jlist
+      splitjlist.push(this.state.jlist)
     } 
   this.setState({splitjlist, idlist:[], idlistWeek:[], idlistInputedDate:[], papersList:[], papersListWeek:[], loading:true}, () => {
     if (!this.state.inputedDate1) {
@@ -113,6 +113,7 @@ class App extends Component {
 
     let loop = 0
     this.state.splitjlist.forEach(jlistitem => {
+      console.log("jlistitem" + jlistitem)
     const jlistString = jlistitem.toString().replace(/,/g,"").slice(0,-4)
     let urlunencoded = `(((${jlistString})) AND Australia[Affiliation]) AND ("`
     const urlEncoded = encodeURIComponent(urlunencoded)
