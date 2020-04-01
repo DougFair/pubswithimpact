@@ -283,7 +283,7 @@ if (this.state.idlistNoJournals.length) {
       let loopWeek = 0
       if (!this.state.inputedDate1) {
       paperListStringWeek.forEach(listString => {
-          axios.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode==json&id=${listString}&api_key=${process.env.REACT_APP_PUBMED_API_KEY}`)
+          axios.get(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=${listString}&api_key=${process.env.REACT_APP_PUBMED_API_KEY}`)
           .then(response2 => {    
             this.state.idlistWeek.forEach(id => {
                 let paperWeekObj = {}
