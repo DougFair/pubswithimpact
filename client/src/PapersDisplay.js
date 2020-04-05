@@ -52,7 +52,7 @@ render (){
     papersToDisplay = this.props.papersList
     heading = 
     <div className="paperDisplay">
-    <p className="customDateMessage">You can customise the dates of your search in the toolbar above</p>        
+    <p className="customDateMessage" style={{textAlign: "center"}}>You can customise the dates of your search in the toolbar above</p>        
     { !this.props.idlistNoJournals.length && 
     <div>
         <h2 className="dateHeading">Papers published yesterday</h2>

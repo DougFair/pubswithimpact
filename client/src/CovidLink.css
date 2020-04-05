@@ -7,7 +7,7 @@
     justify-content: center;
     color: rgb(173, 2, 36);
     border: 1px solid rgb(173, 2, 36);
-    width: 50%;
+    width: 60%;
 }
 
 .covidPara {
@@ -17,4 +17,10 @@
 
 .covidLink {
     margin-bottom: 0
+}
+
+@media (max-width: 550px) {
+    .covidContainer {
+        width:85%
+    }
 }
