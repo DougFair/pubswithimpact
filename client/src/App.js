@@ -20,6 +20,8 @@ import ResetButton from "./ResetButton"
 import {Route, Switch} from 'react-router-dom'
 // import urlunencoded from './urlunencoded'
 import rateLimit from 'axios-rate-limit';
+import CovidLink from "./CovidLink"
+
 
 const http = rateLimit(axios.create(), {
   maxRequests: 1,
@@ -113,7 +115,6 @@ class App extends Component {
 
     let loop = 0
     this.state.splitjlist.forEach(jlistitem => {
-      console.log("jlistitem" + jlistitem)
     const jlistString = jlistitem.toString().replace(/,/g,"").slice(0,-4)
     let urlunencoded = `(((${jlistString})) AND Australia[Affiliation]) AND ("`
     const urlEncoded = encodeURIComponent(urlunencoded)
@@ -391,12 +392,15 @@ filterJournals = (selectedJournals, newJournals) => {
               resetDates = {this.resetDates}
             />
           }
+          <div className="covidlink">
+            <CovidLink 
+              />
+          </div>
             {(!this.state.apiError && !this.state.papersListNoJournals.length) ?
             <p className="ifColorList">Impact Factors: <span style={{color:"red",fontSize:"1.5rem"}}>•</span> >30 | <span style={{color:"orange",fontSize:"1.5rem"}}>•</span> 20-30 | <span style={{color:"green",fontSize:"1.5rem"}}>•</span> 10-20 | <span style={{color:"blue",fontSize:"1.5rem"}}>•</span> &lt;10</p>
             :
             null
           }
-
               {papersDisplay}
               </>
               } 

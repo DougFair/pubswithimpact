@@ -19,7 +19,6 @@ class AdminUpdateJournal extends Component {
         this.setState({submitted: true})
          axios.get("https://toppubs-385ff.firebaseio.com/journals.json")
         .then(response => {
-            console.log("response" +response.data)
             for (let [key, value] of Object.entries(response.data)) {          
                 if(value.title === this.state.title) {
                    
