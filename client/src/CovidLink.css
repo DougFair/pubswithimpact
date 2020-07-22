@@ -12,12 +12,13 @@
 
 .covidPara {
     margin-top: 3px;
-    margin-bottom: 3px
+    margin-bottom: 3px;
+    font-size: 1rem;
 }
 
 .covidLink {
     margin-bottom: 0
-}Y
+}
 
 
 @media (max-width: 550px) {
