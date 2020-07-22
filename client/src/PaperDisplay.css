@@ -26,6 +26,7 @@
 .dateHeading {
     text-align: center;
     margin: 15px 50px 0 50px;
+    /* width: 70% */
 }
 
 
@@ -54,8 +55,6 @@
         text-align: justify;
     }
 }
-
-
 
 .totalpapers{
     text-align: center;

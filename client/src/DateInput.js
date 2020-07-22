@@ -1,14 +1,13 @@
 import React, {Component} from 'react'
 import './DateInput.css'
-
+import Countries from './Countries'
 
 class DateInput extends Component {
     state = {
         newStartDate: "",
         newEndDate: "",
+        country: ""
 }
-
-
 
     handleSubmit = (evt) => {
         evt.preventDefault()
@@ -21,16 +20,26 @@ class DateInput extends Component {
         this.setState({[evt.target.name]: evt.target.value})
         )
 
-
+    handleCountryChange = (country) => { 
+            this.props.countrySelect(country)
+    }
 
     render() {
      
     return (
-            <div>
-                <div className="dateInput">
-                <div>
-                    <p className="customiseMessage">Click "Journals" in menubar to customise your search further...</p>
+        <div className="dateInput">
+                <div className="dropdown">
+                    <div>
+                    <p className= "countryFormTitle">Country selector</p>
+                    </div>
+                    <div className="dropdownMenu">
+                    <Countries
+                        handleCountryChange={this.handleCountryChange}
+                    />
+                    </div>
                 </div>
+                
+                
                 <div className="dateModule">
                 <form  className="dateInputForm" onSubmit={this.handleSubmit}>
                 
@@ -56,14 +65,7 @@ class DateInput extends Component {
                     <p>You must enter a Start Date. End Date defaults to today.</p>
                 </div>
                 </div>
-                </div>
-
-            </div>
-
-                
-                
-       
-              
+            </div>       
         )
     }
 }

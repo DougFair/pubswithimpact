@@ -1,12 +1,23 @@
 import React from 'react'
 import './WelcomeBanner.css'
 import './DateInput.css'
-const WelcomeBanner = () => {
+
+const WelcomeBanner = (props) => {
+    let displayCountry = ""
+    if(props.country === "Australia") {
+        displayCountry = "AUSSIE"
+    } else {
+        if(props.country.slice(-1) !== "s"){
+        displayCountry = `${props.country.toUpperCase()}'S`
+        } else {
+            displayCountry = `${props.country.toUpperCase()}'`
+        }
+    }
     return(
         <div>
             <div className="container">
                 <div className="bannerText">
-                    <p className="bannerTitle">AUSSIE PUBS WITH <span style={{color: "red", fontStyle: "italic"}}>IMPACT!</span></p>
+                    <p className="bannerTitle">{displayCountry} PUBS WITH <span style={{color: "red", fontStyle: "italic"}}>IMPACT!</span></p>
                     <p className="bannerSubtitle">Keep up with the latest hot Australian papers</p>
                 </div>
             </div>

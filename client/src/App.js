@@ -52,7 +52,8 @@ class App extends Component {
     newJournals:[],
     splitjlist: [], 
     journals: [],
-    apiError: false
+    apiError: false,
+    country: "Australia"
   }
 
   componentDidMount () {
@@ -116,7 +117,7 @@ class App extends Component {
     let loop = 0
     this.state.splitjlist.forEach(jlistitem => {
     const jlistString = jlistitem.toString().replace(/,/g,"").slice(0,-4)
-    let urlunencoded = `(((${jlistString})) AND Australia[Affiliation]) AND ("`
+    let urlunencoded = `(((${jlistString})) AND ${this.state.country}[Affiliation]) AND ("`
     const urlEncoded = encodeURIComponent(urlunencoded)
     const dateParamsEncoded = encodeURIComponent(dateParams)
     const dateParamsEncoded2 = encodeURIComponent(dateParams2)
@@ -159,7 +160,7 @@ class App extends Component {
 
 
 noJournalSearch = () => {
-  const urlunencoded = `(Australia[Affiliation]) AND ("`
+  const urlunencoded = `(${this.state.country}[Affiliation]) AND ("`
   this.setState({loading:true})
   const dateParams = `${this.state.dateMinus7}"[Date - Entrez] : "3000"[Date - Entrez])`
   const urlEncoded = encodeURIComponent(urlunencoded)
@@ -353,6 +354,10 @@ filterJournals = (selectedJournals, newJournals) => {
   this.getIdList()}) 
 }
 
+countrySelect = (country) => {
+    this.setState({country}, () => {
+      this.getIdList()}
+  )}
 
   render() {
     let papersDisplay = ""
@@ -367,6 +372,7 @@ filterJournals = (selectedJournals, newJournals) => {
       idlistNoJournals = {this.state.idlistNoJournals}
       idlistWeek = {this.state.idlistWeek}
       idlistInputedDate = {this.state.idlistInputedDate}
+      country = {this.state.country}
       /> 
       if(this.state.loading) {
         papersDisplay = <Spinner />
@@ -382,9 +388,12 @@ filterJournals = (selectedJournals, newJournals) => {
         <Switch>
           <Route exact path="/" render= {() => 
             <>
-            <WelcomeBanner />
+            <WelcomeBanner 
+            country = {this.state.country} 
+            />
             <DateInput
               dateInput = {this.dateInput}
+              countrySelect = {this.countrySelect}
             /> 
             <SubHeading />  
             {(this.state.inputedDate1 || this.state.papersListNoJournals.length > 0) &&

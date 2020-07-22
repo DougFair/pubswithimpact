@@ -16,9 +16,9 @@ render (){
     heading =
       <div className="noPapers">
       {!this.props.inputedDate2 ? 
-      <h2>No papers published since {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")}</h2>
+      <h2>No papers by authors from {this.props.country} published since {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")}</h2>
       : 
-      <h2 className="noPapers">No papers published between {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")} - {moment(this.props.inputedDate2, "YYYY-MM-DD").format("DD/MM/YYYY")} </h2>
+      <h2 className="noPapers">No papers published by authors from {this.props.country} between {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")} - {moment(this.props.inputedDate2, "YYYY-MM-DD").format("DD/MM/YYYY")} </h2>
       }
     </div>
   } else {
@@ -29,12 +29,12 @@ render (){
       <div>
       {!this.props.inputedDate2 ? 
           <div>
-            <h2 className="dateHeading">Papers published since {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")}</h2>
+            <h2 className="dateHeading">Papers published by authors from {this.props.country} since {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")}</h2>
             <h2 className="totalpapers">({this.props.idlistInputedDate.length} in total)</h2>
           </div>
           :
           <div>
-            <h2 className="dateHeading">Papers published between {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")} - {moment(this.props.inputedDate2, "YYYY-MM-DD").format("DD/MM/YYYY")}</h2>
+            <h2 className="dateHeading">Papers published by authors from {this.props.country} between {moment(this.props.inputedDate1, "YYYY-MM-DD").format("DD/MM/YYYY")} - {moment(this.props.inputedDate2, "YYYY-MM-DD").format("DD/MM/YYYY")}</h2>
             <h2 className="totalpapers">({this.props.idlistInputedDate.length} in total)</h2>
           </div>
           }
@@ -44,7 +44,7 @@ render (){
     heading = 
     <div> 
         <div >
-            <h2 className="dateHeading">All Aussie papers published in the past week</h2>
+            <h2 className="dateHeading">All papers published by authors from {this.props.country} in the past week</h2>
             <h2 className="totalpapers">({this.props.idlistNoJournals.length} in total)</h2>
         </div>
     </div>
@@ -52,15 +52,15 @@ render (){
     papersToDisplay = this.props.papersList
     heading = 
     <div className="paperDisplay">
-    <p className="customDateMessage" style={{textAlign: "center"}}>You can customise the dates of your search in the toolbar above</p>        
+    <p className="customDateMessage" style={{textAlign: "center"}}>You can customise the dates or country of your search in the toolbar above or the journals in the top menubar</p>        
     { !this.props.idlistNoJournals.length && 
     <div>
-        <h2 className="dateHeading">Papers published yesterday</h2>
+        <h2 className="dateHeading">Papers published yesterday by authors from {this.props.country}</h2>
         <h2 className="totalpapers">({this.props.papersList.length} in total)</h2>
     </div>
     }
     {!this.props.papersList.length && !this.props.idlistNoJournals.length && 
-    <p className="noPapers">There were no Aussie papers published yesterday in the selected journal(s).</p>
+    <p className="noPapers">There were no papers published by authors from {this.props.country} yesterday in the selected journal(s).</p>
     }
     </div>
   }
@@ -155,8 +155,8 @@ if (this.props.inputedDate1 || this.props.idlistNoJournals.length){
     } else {
         weeklyListDisplay = 
         <div> 
-            <div className="paperDisplay" style={{display:"flex", alignItems: "center"}}>
-            <p className="noPapers">The were no papers published in the preceeding 6 days.</p>
+            <div className="paperDisplay" style={{display:"flex", alignItems: "center", justifyContent: "center"}}>
+            <p className="noPapers">The were no papers published by authors from {this.props.country} in the preceeding 6 days.</p>
         </div>
         </div>
         }
@@ -167,7 +167,7 @@ if (this.props.inputedDate1 || this.props.idlistNoJournals.length){
             {listDisplay}
             {weeklyListDisplay && 
             <div>
-                <h2 className="dateHeading">Papers published in the preceeding 6 days</h2>
+                <h2 className="dateHeading">Papers published in the preceeding 6 days by authors from {this.props.country} </h2>
                 <h2 className="totalpapers">({this.props.idlistWeek.length} in total)</h2>
                 {weeklyListDisplay}
             </div>
