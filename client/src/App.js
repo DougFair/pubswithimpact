@@ -70,7 +70,7 @@ class App extends Component {
                 jnlObj["IF"] = jnl.if
                 jlistTitleIF.push(jnlObj)
                 jlist.push((`"${jnl.title}"[Journal] OR `))
-            })})
+              })})
     .then (response => this.setState({jlist, jlistTitleIF}, () => this.getIdList ()
     ))       
   }   
