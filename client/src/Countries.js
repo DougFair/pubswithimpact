@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
-import { CountryDropdown } from 'react-country-region-selector';
- 
- 
+import React, { Component } from "react";
+import { CountryDropdown } from "react-country-region-selector";
+
 class Countries extends Component {
+  state = {
+    country: "",
+  };
 
-state = { 
-    country: '', 
-};
+  selectCountry = (val) => {
+    this.props.handleCountryChange(val);
+    this.setState({ country: val });
+  };
 
- 
-selectCountry = (val) => {
-    this.props.handleCountryChange(val)
-  }
- 
-
-  render () {
+  render() {
     const { country } = this.state;
     return (
       <div>
@@ -22,10 +19,11 @@ selectCountry = (val) => {
           value={country}
           defaultOptionLabel="Select a country to search"
           // priorityOptions={["AU"]}
-          onChange={(val) => this.selectCountry(val)} />
+          onChange={(val) => this.selectCountry(val)}
+        />
       </div>
     );
   }
 }
 
-export default Countries
+export default Countries;

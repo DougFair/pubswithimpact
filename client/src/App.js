@@ -96,6 +96,7 @@ class App extends Component {
   };
 
   getIdList = () => {
+    console.log("ojwehef");
     let splitjlist = [];
     let dateParams = "";
     let dateParams2 = "";
@@ -456,19 +457,19 @@ class App extends Component {
     let papersDisplay = "";
 
     papersDisplay = (
-      // <PapersDisplay
-      //   papersList={this.state.papersList}
-      //   papersListWeek={this.state.papersListWeek}
-      //   papersListInputedDate={this.state.papersListInputedDate}
-      //   papersListNoJournals={this.state.papersListNoJournals}
-      //   inputedDate1={this.state.inputedDate1}
-      //   inputedDate2={this.state.inputedDate2}
-      //   idlistNoJournals={this.state.idlistNoJournals}
-      //   idlistWeek={this.state.idlistWeek}
-      //   idlistInputedDate={this.state.idlistInputedDate}
-      //   country={this.state.country}
-      // />
-      <PapersDisplay2 papersList={this.state.papersListInputedDate} />
+      <PapersDisplay
+        papersList={this.state.papersList}
+        papersListWeek={this.state.papersListWeek}
+        papersListInputedDate={this.state.papersListInputedDate}
+        papersListNoJournals={this.state.papersListNoJournals}
+        inputedDate1={this.state.inputedDate1}
+        inputedDate2={this.state.inputedDate2}
+        idlistNoJournals={this.state.idlistNoJournals}
+        idlistWeek={this.state.idlistWeek}
+        idlistInputedDate={this.state.idlistInputedDate}
+        country={this.state.country}
+      />
+      // <PapersDisplay2 papersList={this.state.papersListInputedDate} />
     );
     if (this.state.loading) {
       papersDisplay = <Spinner />;
@@ -495,9 +496,9 @@ class App extends Component {
                   this.state.papersListNoJournals.length > 0) && (
                   <ResetButton resetDates={this.resetDates} />
                 )}
-                <div className="covidlink">
+                {/* <div className="covidlink">
                   <CovidLink />
-                </div>
+                </div> */}
                 {!this.state.apiError &&
                 !this.state.papersListNoJournals.length ? (
                   <p className="ifColorList">
