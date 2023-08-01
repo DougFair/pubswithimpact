@@ -19,10 +19,26 @@ const SubHeading = () => {
         of impact factor.
       </p>
       <p style={{ textAlign: "center", fontWeight: "bold" }}>
-        <span style={{ color: "red" }}>NEW: </span>You can now search top pubs
-        by country via the dropdown menu above.
+        You can now search top pubs by country via the dropdown menu above.
       </p>
       <hr style={{ marginTop: "20px" }} />
+      <p
+        className="urlWarning"
+        style={{
+          backgroundColor: "indianred",
+          width: "80%",
+          padding: "20px",
+          color: "white",
+          textAlign: "center",
+        }}
+      >
+        NOTE: From 01/08/2023 this site will move to{" "}
+        <a href="https://www.pubswithimpact.com" target="_blank" rel="noopener">
+          www.pubswithimpact.com
+        </a>
+        . It will cease to function on the current url from 01/09/2023 so please
+        bookmark the new one now for continued access!
+      </p>
     </div>
   );
 };
