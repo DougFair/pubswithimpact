@@ -19,7 +19,7 @@ const SubHeading = () => {
         of impact factor.
       </p>
       <p style={{ textAlign: "center", fontWeight: "bold" }}>
-        You can chaange country via the dropdown menu above.
+        You can change country via the dropdown menu above.
       </p>
       <hr style={{ marginTop: "20px" }} />
       {/* <p
