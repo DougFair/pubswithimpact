@@ -19,10 +19,10 @@ const SubHeading = () => {
         of impact factor.
       </p>
       <p style={{ textAlign: "center", fontWeight: "bold" }}>
-        You can now search top pubs by country via the dropdown menu above.
+        You can chaange country via the dropdown menu above.
       </p>
       <hr style={{ marginTop: "20px" }} />
-      <p
+      {/* <p
         className="urlWarning"
         style={{
           backgroundColor: "indianred",
@@ -38,7 +38,7 @@ const SubHeading = () => {
         </a>
         . It will cease to function on the current url from 01/09/2023 so please
         bookmark the new one now for continued access!
-      </p>
+      </p> */}
     </div>
   );
 };
